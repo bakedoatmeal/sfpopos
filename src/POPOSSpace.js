@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import React from 'react';
+import './POPOSSpace.css'
 
 const POPOSSpace = ({ name, image, address}) => {
   return (
-    <div>
+    <div className='POPOSSpace'>
       <img src={`${process.env.PUBLIC_URL}/images/${image}`}     
         width="300"
         height="300"
