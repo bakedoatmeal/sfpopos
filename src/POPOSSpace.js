@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import React from 'react';
-import './POPOSSpace.css'
+import './POPOSSpace.css';
 
-const POPOSSpace = ({ name, image, address}) => {
+const POPOSSpace = ({ name, image, address, hours}) => {
   return (
     <div className='POPOSSpace'>
       <img src={`${process.env.PUBLIC_URL}/images/${image}`}     
@@ -12,6 +12,7 @@ const POPOSSpace = ({ name, image, address}) => {
       />
       <h1>{name}</h1>
       <div>{address}</div>
+      <div>{hours}</div>
     </div>
   )
 }
