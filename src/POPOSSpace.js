@@ -1,16 +1,19 @@
-import logo from './logo.svg';
+
 import React from 'react';
 import './POPOSSpace.css';
+import {Link} from 'react-router-dom'
 
-const POPOSSpace = ({ name, image, address, hours}) => {
+const POPOSSpace = ({ name, image, address, hours, id}) => {
   return (
     <div className='POPOSSpace'>
-      <img src={`${process.env.PUBLIC_URL}/images/${image}`}     
-        width="300"
-        height="300"
-        alt="50 Califonia St."
-      />
-      <h1>{name}</h1>
+      <Link to={`/details/${id}`}>
+        <img src={`${process.env.PUBLIC_URL}images/${image}`} width="300" height="300" alt="Hello" />
+      </Link>
+      <h1>
+          <Link to={`/details/${id}`}>
+          {name}
+        </Link>
+      </h1>
       <div>{address}</div>
       <div>{hours}</div>
     </div>
